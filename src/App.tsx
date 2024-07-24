@@ -8,8 +8,8 @@ const App: React.FC = () => {
     <Router>
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/add-product" element={<ProductForm  />} />
-        <Route path="/edit-product/:id" element={<ProductForm />} />
+        <Route path="/product" element={<ProductForm  />} />
+        <Route path="/product/:id" element={<ProductForm isEditMode={true}/>} />
       </Routes>
     </Router>
   );
