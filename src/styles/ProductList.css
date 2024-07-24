@@ -1,8 +1,25 @@
-/* src/components/ProductList.css */
-.product-table {
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .product-table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 20px;
+  }
+  .add-button {
+    margin-left: auto;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .add-button:hover {
+    background-color: #45a049;
   }
   
   .product-table th, .product-table td {
@@ -25,5 +42,16 @@
     width: 100%;
     margin-bottom: 20px;
     box-sizing: border-box;
+  }
+  .footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
   }
   

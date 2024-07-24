@@ -8,6 +8,8 @@ import {
   updateProduct,
 } from "../../services/apiService";
 import { Product } from "../../interfaces/Products";
+import Swal from "sweetalert2";
+import { useNavigate } from "react-router-dom";
 
 interface ProductFormProps {
   product?: Product;
@@ -32,6 +34,7 @@ const ProductForm: React.FC<ProductFormProps> = ({
       ? new Date(product.date_revision)
       : new Date(new Date().setFullYear(new Date().getFullYear() + 1)),
   });
+  const navigate = useNavigate();
 
   useEffect(() => {
     if (product) {
@@ -76,10 +79,24 @@ const ProductForm: React.FC<ProductFormProps> = ({
   const handleSubmit = async (values: Product) => {
     try {
       if (isEditMode) {
+        console.log("Ingersa a update");
+        console.log(values);
         await updateProduct(values);
       } else {
+        console.log("Ingersa a create");
+        console.log(values);
         await createProduct(values);
       }
+
+      Swal.fire({
+        title: "Success!",
+        text: `Product ${isEditMode ? "updated" : "created"} successfully!`,
+        icon: "success",
+        confirmButtonText: "OK",
+      }).then(() => {
+        navigate("/");
+      });
+
       if (onSubmit) {
         onSubmit();
       }

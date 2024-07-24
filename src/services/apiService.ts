@@ -23,6 +23,7 @@ export const createProduct = async (product: Product): Promise<void> => {
     if (!product.name || !product.description) {
       throw new Error("Name and description cannot be null");
     }
+    console.log('API', product);
     await axios.post(`${BASE_URL}/bp/products`, product, {
       headers: {
         authorId: AUTHOR_ID,
