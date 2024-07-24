@@ -1,0 +1,29 @@
+/* src/components/ProductList.css */
+.product-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  .product-table th, .product-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  .product-table th {
+    background-color: #f2f2f2;
+    text-align: left;
+  }
+  
+  .product-logo {
+    width: 50px;
+    height: auto;
+  }
+  
+  .search-input {
+    padding: 8px;
+    width: 100%;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+  }
+  
