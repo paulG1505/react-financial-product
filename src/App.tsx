@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, useNavigate } from 'react-router-dom';
 import HomePage from './home/HomePage';
-import ProductForm from './home/components/ProductForm';
+import ProductForm from './components/ProductForm';
 
 const App: React.FC = () => {
   return (

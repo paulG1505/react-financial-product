@@ -1,8 +1,8 @@
 // src/components/ProductList.tsx
 import React, { useEffect, useState } from "react";
-import "../../styles/ProductList.css";
-import { Product } from "../../interfaces/Products";
-import { deleteProduct, getProducts } from "../../services/apiService";
+import "../styles/ProductList.css";
+import { Product } from "../interfaces/Products";
+import { deleteProduct, getProducts } from "../services/apiService";
 import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
